@@ -1,0 +1,86 @@
+{
+  "test_suite": "e2b_basic_functionality",
+  "start_time": "2025-07-28T15:45:43.615502",
+  "tests": [
+    {
+      "test_name": "basic_connection",
+      "start_time": "2025-07-28T15:45:43.615520",
+      "success": true,
+      "error": null,
+      "duration_seconds": 1.2340061664581299,
+      "end_time": "2025-07-28T15:45:44.849536"
+    },
+    {
+      "test_name": "filesystem_operations",
+      "start_time": "2025-07-28T15:45:44.852718",
+      "operations": [
+        "write_file",
+        "read_file",
+        "list_directory",
+        "create_script"
+      ],
+      "success": true,
+      "error": null,
+      "end_time": "2025-07-28T15:45:47.405424"
+    },
+    {
+      "test_name": "code_execution",
+      "start_time": "2025-07-28T15:45:47.405698",
+      "executions": [
+        {
+          "type": "python_simple",
+          "exit_code": 0,
+          "stdout": "Hello from E2B Python!"
+        },
+        {
+          "type": "python_script",
+          "exit_code": 0,
+          "stdout_length": 90
+        },
+        {
+          "type": "shell_command",
+          "exit_code": 0,
+          "output_lines": 9
+        },
+        {
+          "type": "error_handling",
+          "exit_code": 1,
+          "has_stderr": true
+        }
+      ],
+      "success": true,
+      "error": null,
+      "end_time": "2025-07-28T15:45:51.396193"
+    },
+    {
+      "test_name": "network_access",
+      "start_time": "2025-07-28T15:45:51.398841",
+      "network_tests": [
+        {
+          "type": "http_request",
+          "success": true,
+          "response_length": 429
+        },
+        {
+          "type": "python_request",
+          "success": true,
+          "output": "成功! User-Agent: Python-urllib/3.11"
+        },
+        {
+          "type": "dns_lookup",
+          "success": true,
+          "output": "DNS解析成功: google.com -> 172.253.117.100"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "end_time": "2025-07-28T15:45:55.254718"
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0
+  },
+  "end_time": "2025-07-28T15:45:55.254922"
+}
